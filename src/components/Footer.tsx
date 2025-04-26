@@ -1,5 +1,5 @@
 
-import { Instagram, Twitter, Facebook, Linkedin } from "lucide-react";
+import { Instagram, Twitter, Facebook, Linkedin, Mail, Phone, MessageSquare } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -11,7 +11,21 @@ export const Footer = () => {
             <p className="text-gray-300 mb-6 max-w-md">
               Создаю эффективные тексты, которые помогают брендам выделяться, привлекать аудиторию и увеличивать продажи.
             </p>
-            <div className="flex space-x-4">
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2 text-primary" />
+                <a href="mailto:juss1962@gmail.com" className="text-gray-300 hover:text-primary transition-colors">juss1962@gmail.com</a>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2 text-primary" />
+                <a href="tel:+79809704052" className="text-gray-300 hover:text-primary transition-colors">+7 (980) 970-40-52</a>
+              </div>
+              <div className="flex items-center">
+                <MessageSquare className="h-4 w-4 mr-2 text-primary" />
+                <a href="https://t.me/juss1962" className="text-gray-300 hover:text-primary transition-colors">@juss1962</a>
+              </div>
+            </div>
+            <div className="flex space-x-4 mt-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>

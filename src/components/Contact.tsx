@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -21,7 +21,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-gray-600">contact@copywriter.com</p>
+                  <p className="text-gray-600">juss1962@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -30,7 +30,16 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Телефон</h4>
-                  <p className="text-gray-600">+7 (999) 123-45-67</p>
+                  <p className="text-gray-600">+7 (980) 970-40-52</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="bg-primary/10 p-3 rounded-full mr-4">
+                  <MessageSquare className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Telegram</h4>
+                  <p className="text-gray-600">@juss1962</p>
                 </div>
               </div>
               <div className="flex items-center">
