@@ -1,46 +1,54 @@
 
+import { Instagram, Twitter, Facebook, Linkedin } from "lucide-react";
+
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
   return (
-    <footer className="bg-[#1A1F2C] text-white py-12">
-      <div className="max-w-6xl mx-auto px-4">
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Профессиональный копирайтинг</h3>
-            <p className="text-[#999] mb-6 max-w-md">
-              Превращаю слова в инструмент развития вашего бизнеса.
-              Создаю тексты, которые продают, информируют и вдохновляют.
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-xl font-bold mb-4">Копирайтер Про</h3>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Создаю эффективные тексты, которые помогают брендам выделяться, привлекать аудиторию и увеличивать продажи.
             </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
-          
           <div>
-            <h4 className="text-lg font-medium mb-4">Услуги</h4>
+            <h4 className="text-lg font-semibold mb-4">Ссылки</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-[#999] hover:text-white transition-colors">Продающие тексты</a></li>
-              <li><a href="#" className="text-[#999] hover:text-white transition-colors">SEO-копирайтинг</a></li>
-              <li><a href="#" className="text-[#999] hover:text-white transition-colors">Email-маркетинг</a></li>
-              <li><a href="#" className="text-[#999] hover:text-white transition-colors">Контент для соцсетей</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Главная</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-primary transition-colors">Услуги</a></li>
+              <li><a href="#portfolio" className="text-gray-300 hover:text-primary transition-colors">Портфолио</a></li>
+              <li><a href="#testimonials" className="text-gray-300 hover:text-primary transition-colors">Отзывы</a></li>
+              <li><a href="#contact" className="text-gray-300 hover:text-primary transition-colors">Контакты</a></li>
             </ul>
           </div>
-          
           <div>
-            <h4 className="text-lg font-medium mb-4">Контакты</h4>
+            <h4 className="text-lg font-semibold mb-4">Услуги</h4>
             <ul className="space-y-2">
-              <li className="text-[#999]">Email: contact@copywriter.ru</li>
-              <li className="text-[#999]">Телефон: +7 (999) 123-45-67</li>
+              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Веб-копирайтинг</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Продающие тексты</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">SEO-тексты</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Email-маркетинг</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Сторителлинг</a></li>
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-[#333] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-[#999] text-sm">© {currentYear} Копирайтер. Все права защищены.</p>
-          <div className="mt-4 md:mt-0">
-            <ul className="flex space-x-6">
-              <li><a href="#" className="text-[#999] hover:text-white transition-colors">Политика конфиденциальности</a></li>
-              <li><a href="#" className="text-[#999] hover:text-white transition-colors">Условия использования</a></li>
-            </ul>
-          </div>
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>© {new Date().getFullYear()} Копирайтер Про. Все права защищены.</p>
         </div>
       </div>
     </footer>

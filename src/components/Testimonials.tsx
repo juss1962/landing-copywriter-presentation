@@ -1,43 +1,45 @@
 
-import { Quote } from "lucide-react";
+import { QuoteIcon } from "lucide-react";
 
 export const Testimonials = () => {
   const testimonials = [
     {
-      text: "Тексты превзошли все мои ожидания! Конверсия выросла на 35% уже в первую неделю после внедрения нового контента на сайт.",
-      author: "Анна Смирнова",
-      position: "Руководитель маркетинга, TechSolutions",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
+      quote: "Тексты, написанные для нашего интернет-магазина, значительно повысили конверсию. Профессиональный подход и глубокое понимание нашей целевой аудитории впечатлили!",
+      author: "Елена Соколова",
+      position: "Маркетинг-директор, BuyNow",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
     {
-      text: "Профессиональный подход и глубокое понимание нашей ниши. Получили точно то, что искали, уже на первой итерации!",
-      author: "Михаил Иванов",
-      position: "CEO, StartupSpace",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      quote: "Обратились за контентом для запуска нового продукта и получили не просто тексты, а настоящую стратегию взаимодействия с клиентами. Результат превзошел все ожидания!",
+      author: "Александр Петров",
+      position: "CEO, TechStart",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
     {
-      text: "Работаем вместе уже больше года. Наш блог регулярно получает высокие позиции в поиске благодаря качественному SEO-копирайтингу.",
-      author: "Елена Королёва",
-      position: "Контент-менеджер, FitnessGuru",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1361&q=80"
+      quote: "Работаем вместе уже больше года. За это время наш блог стал одним из лидеров ниши, а тексты регулярно получают высокие оценки читателей. Рекомендую!",
+      author: "Мария Иванова",
+      position: "Контент-менеджер, GreenLife",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     }
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#333] mb-4">Что говорят клиенты</h2>
-          <p className="text-lg text-[#555] max-w-2xl mx-auto">
-            Отзывы от тех, кто уже оценил качество моих текстов и их влияние на бизнес-результаты.
+    <section className="py-20 bg-white" id="testimonials">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Отзывы клиентов</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Что говорят мои клиенты о сотрудничестве и результатах работы
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#F1F0FB] p-8 rounded-lg relative">
-              <Quote className="absolute text-[#9b87f5] opacity-20 w-14 h-14 -top-2 -left-2" />
-              <p className="text-[#333] mb-6 relative z-10">"{testimonial.text}"</p>
+            <div 
+              key={index} 
+              className="bg-accent/10 rounded-lg p-6 relative hover:shadow-lg transition-all duration-300"
+            >
+              <QuoteIcon className="absolute top-6 right-6 h-8 w-8 text-primary/20" />
+              <p className="text-gray-700 mb-6 relative z-10">"{testimonial.quote}"</p>
               <div className="flex items-center">
                 <img 
                   src={testimonial.avatar} 
@@ -45,8 +47,8 @@ export const Testimonials = () => {
                   className="w-12 h-12 rounded-full mr-4 object-cover"
                 />
                 <div>
-                  <h4 className="font-medium text-[#333]">{testimonial.author}</h4>
-                  <p className="text-sm text-[#555]">{testimonial.position}</p>
+                  <h4 className="font-semibold">{testimonial.author}</h4>
+                  <p className="text-gray-500 text-sm">{testimonial.position}</p>
                 </div>
               </div>
             </div>

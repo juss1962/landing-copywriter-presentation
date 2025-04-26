@@ -1,119 +1,77 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Portfolio = () => {
-  const portfolioItems = [
+  const projects = [
     {
-      category: "landing",
-      title: "Лендинг для IT-компании",
-      description: "Текст для главной страницы, увеличивший конверсию на 43%",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80"
+      title: "Редизайн веб-сайта туристической компании",
+      description: "Полное обновление контента сайта, включая главную страницу, разделы услуг и блог.",
+      image: "https://images.unsplash.com/photo-1499363536502-87642509e31b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      category: "Веб-контент",
+      result: "Рост конверсии на 34%"
     },
     {
-      category: "email",
-      title: "Серия email-рассылок",
-      description: "Цикл писем, повысивший открываемость до 32%",
-      image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2006&q=80"
+      title: "Email-маркетинг для онлайн-школы",
+      description: "Разработка серии писем для воронки продаж образовательных курсов.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      category: "Email-маркетинг",
+      result: "Увеличение продаж на 28%"
     },
     {
-      category: "social",
-      title: "Контент-план для Instagram",
-      description: "Стратегия, увеличившая вовлеченность на 65%",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-    },
+      title: "Описание линейки премиальной косметики",
+      description: "Создание продающих описаний для 50+ товаров новой коллекции бренда.",
+      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      category: "Продуктовые описания",
+      result: "Запуск с полным аншлагом"
+    }
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-[#F6F6F7]" id="portfolio">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#333] mb-4">Мои работы</h2>
-          <p className="text-lg text-[#555] max-w-2xl mx-auto">
-            Примеры текстов, которые помогли клиентам достичь своих бизнес-целей.
+    <section className="py-20 bg-accent/10" id="portfolio">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Мои работы</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Примеры успешных проектов, которые принесли клиентам измеримые результаты
           </p>
         </div>
-
-        <Tabs defaultValue="all" className="w-full">
-          <div className="flex justify-center mb-12">
-            <TabsList className="bg-[#E5DEFF]">
-              <TabsTrigger value="all" className="data-[state=active]:bg-[#9b87f5] data-[state=active]:text-white">
-                Все работы
-              </TabsTrigger>
-              <TabsTrigger value="landing" className="data-[state=active]:bg-[#9b87f5] data-[state=active]:text-white">
-                Лендинги
-              </TabsTrigger>
-              <TabsTrigger value="email" className="data-[state=active]:bg-[#9b87f5] data-[state=active]:text-white">
-                Email-маркетинг
-              </TabsTrigger>
-              <TabsTrigger value="social" className="data-[state=active]:bg-[#9b87f5] data-[state=active]:text-white">
-                Соцсети
-              </TabsTrigger>
-            </TabsList>
-          </div>
-
-          <TabsContent value="all" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {portfolioItems.map((item, index) => (
-                <PortfolioCard key={index} item={item} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          {["landing", "email", "social"].map((category) => (
-            <TabsContent key={category} value={category} className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {portfolioItems
-                  .filter((item) => item.category === category)
-                  .map((item, index) => (
-                    <PortfolioCard key={index} item={item} />
-                  ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-lg overflow-hidden shadow-md hover-scale"
+            >
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover" 
+                />
               </div>
-            </TabsContent>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="bg-primary/10 text-primary text-xs font-medium px-2.5 py-0.5 rounded">
+                    {project.category}
+                  </span>
+                  <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                    {project.result}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <Button variant="outline" size="sm" className="w-full">
+                  Подробнее
+                </Button>
+              </div>
+            </div>
           ))}
-        </Tabs>
-
-        <div className="text-center mt-12">
-          <Button variant="outline" className="border-[#9b87f5] text-[#9b87f5] hover:bg-[#E5DEFF]">
-            Смотреть больше работ
+        </div>
+        <div className="mt-12 text-center">
+          <Button variant="secondary" size="lg">
+            Смотреть все проекты
           </Button>
         </div>
       </div>
     </section>
-  );
-};
-
-interface PortfolioCardProps {
-  item: {
-    title: string;
-    description: string;
-    image: string;
-    category: string;
-  };
-}
-
-const PortfolioCard = ({ item }: PortfolioCardProps) => {
-  return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
-      <div className="h-48 overflow-hidden">
-        <img 
-          src={item.image} 
-          alt={item.title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
-        />
-      </div>
-      <div className="p-6">
-        <span className="inline-block px-3 py-1 bg-[#E5DEFF] text-[#9b87f5] text-xs font-medium rounded-full mb-3">
-          {item.category === "landing" ? "Лендинг" : 
-           item.category === "email" ? "Email-маркетинг" : "Соцсети"}
-        </span>
-        <h3 className="text-xl font-semibold text-[#333] mb-2">{item.title}</h3>
-        <p className="text-[#555] mb-4">{item.description}</p>
-        <Button variant="link" className="text-[#9b87f5] p-0 h-auto font-medium">
-          Подробнее
-        </Button>
-      </div>
-    </div>
   );
 };
