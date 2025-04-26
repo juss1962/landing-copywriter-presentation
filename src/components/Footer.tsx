@@ -53,11 +53,16 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Услуги</h4>
             <ul className="space-y-2">
+<<<<<<< HEAD
+              <li className="text-[#999]">Email: juss1962@gmail.com</li>
+              <li className="text-[#999]">Телефон: +7 (980) 970-40-52</li>
+=======
               <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Веб-копирайтинг</a></li>
               <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Продающие тексты</a></li>
               <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">SEO-тексты</a></li>
               <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Email-маркетинг</a></li>
               <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Сторителлинг</a></li>
+>>>>>>> e3ddcb77e90e9cfe7fb130dc29010b6a14cc71a4
             </ul>
           </div>
         </div>
