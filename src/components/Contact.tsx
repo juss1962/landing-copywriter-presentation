@@ -1,10 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 
-export const Contact = () => {
+const Contact = () => {
   return (
     <section className="py-20 bg-accent/10" id="contact">
       <div className="container px-4 md:px-6 mx-auto">
@@ -20,13 +19,8 @@ export const Contact = () => {
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-<<<<<<< HEAD
-                  <h3 className="font-medium text-[#333]">Email</h3>
-                  <p className="text-[#555]">juss1962@gmail.com</p>
-=======
                   <h4 className="font-medium">Email</h4>
                   <p className="text-gray-600">juss1962@gmail.com</p>
->>>>>>> e3ddcb77e90e9cfe7fb130dc29010b6a14cc71a4
                 </div>
               </div>
               <div className="flex items-center">
@@ -34,13 +28,8 @@ export const Contact = () => {
                   <Phone className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-<<<<<<< HEAD
-                  <h3 className="font-medium text-[#333]">Телефон</h3>
-                  <p className="text-[#555]">+7 (980) 970-40-52</p>
-=======
                   <h4 className="font-medium">Телефон</h4>
                   <p className="text-gray-600">+7 (980) 970-40-52</p>
->>>>>>> e3ddcb77e90e9cfe7fb130dc29010b6a14cc71a4
                 </div>
               </div>
               <div className="flex items-center">
@@ -103,3 +92,5 @@ export const Contact = () => {
     </section>
   );
 };
+
+export default Contact;
